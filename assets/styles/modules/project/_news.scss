@@ -1,0 +1,75 @@
+@use "../layout/variable" as *;
+
+.News{
+    padding: 7vw;
+    .News-title{
+        color: #91674B;
+        font-size: 3vw;
+        text-align: center;
+        font-weight: 700;
+    }
+    ul{
+        li{
+            display: flex;
+            margin-top: 2vw;
+            justify-content: center;
+            gap: 10%;
+            font-size: 1.2vw;
+            a{
+                color: black;
+                text-decoration: none;
+                padding: 0.5vw 1vw;
+                border-bottom: 2px solid transparent; /* 初期状態では下線なし */
+                transition: all 0.3s ease;
+            }
+            a:after{
+                border-bottom: 0.2vw solid #f4a261;
+                color: #f4a261;
+            }
+        }
+    }
+
+    .News-content{
+        display: flex;
+        flex-direction: column;
+        margin: 3vw 0vw;
+        .content-box-news{
+            display: block;
+            width: 100%;
+            background: #fff;
+            gap: 10%;
+            margin-bottom: 2vw;
+            padding: 2vw;
+            .text-box{
+                display: flex;
+                justify-content: center;
+                gap: 10%;
+                .date{
+                    margin-top: 0.2vw;
+                    font-size: 1vw;
+                    color: #8C8C8C;
+                }
+                .tag{
+                    font-size: 1.2vw;
+                    width: 8vw;
+                    height: 2vw;
+                    background-color: transparent;
+                    border:0.2vw solid#F4A261;
+                    border-radius: 5vw;
+                    color: #F4A261;
+                    text-align: center;
+                }
+                .text{
+                    font-size: 1.2vw;
+                }
+            }
+        }
+        .content-box-news::after{
+            display: block;
+        }
+    }
+    .last-text{
+        margin-top: 3vw;
+        text-align: center;
+    }
+}

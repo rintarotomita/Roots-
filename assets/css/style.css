@@ -1,0 +1,469 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFF6E3;
+}
+
+.fixid-menu {
+  padding-left: 25%;
+}
+.fixid-menu .fixid-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  background-color: #F4A261;
+}
+.fixid-menu .fixid-content .content-box {
+  margin-top: 5vw;
+  text-align: center;
+}
+.fixid-menu .fixid-content .content-box .title-logo img {
+  width: 15%;
+}
+.fixid-menu .fixid-content .content-box .title-name {
+  font-weight: 700;
+  font-size: 1vw;
+}
+.fixid-menu .fixid-content .content-box .menu {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 3vw;
+  font-size: 1.6vw;
+}
+.fixid-menu .fixid-content .content-box .menu .menu-item {
+  position: relative;
+}
+.fixid-menu .fixid-content .content-box .menu .menu-item .hover-trigger {
+  font-size: 1.6vw;
+}
+.fixid-menu .fixid-content .content-box .menu .menu-item a {
+  font-size: 1vw;
+  color: black;
+  padding: 0.5vw 1.5vw;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.fixid-menu .fixid-content .content-box .menu .menu-item .submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: none;
+  background-color: #F4A261;
+  border: 1px solid #ccc;
+  z-index: 10;
+  width: 100%;
+}
+.fixid-menu .fixid-content .content-box .menu .menu-item .submenu li {
+  margin: 0;
+  padding: 0;
+}
+.fixid-menu .fixid-content .content-box .menu .menu-item .submenu a {
+  font-size: 1.4vw;
+  padding: 0.5vw 1.5vw;
+  color: black;
+}
+.fixid-menu .fixid-content .content-box .menu .menu-item:hover .submenu {
+  display: block;
+}
+.fixid-menu .fixid-content .content-box .menu ul,
+.fixid-menu .fixid-content .content-box .menu li {
+  margin-top: 1vw;
+}
+.fixid-menu .fixid-content .content-box .menu ul a,
+.fixid-menu .fixid-content .content-box .menu li a {
+  text-decoration: none;
+  color: black;
+  text-decoration: none;
+  /* タイトルに合わせた色 */
+  border-radius: 5px;
+  /* 丸みを加えて優しい印象 */
+  transition: all 0.3s ease;
+  position: relative;
+}
+.fixid-menu .fixid-content .content-box .menu ul a:hover,
+.fixid-menu .fixid-content .content-box .menu li a:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.fixid-menu .fixid-content .content-box .menu ul a::after,
+.fixid-menu .fixid-content .content-box .menu li a::after {
+  position: absolute;
+  /* ホバー時に下線が現れる */
+}
+.fixid-menu .fixid-content .content-box .SNS-icon {
+  margin-top: 23vw;
+}
+.fixid-menu .fixid-content .content-box .SNS-icon .SNS-list {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+.fixid-menu .fixid-content .content-box .SNS-icon .SNS-list li {
+  list-style-type: none;
+}
+.fixid-menu .fixid-content .content-box .SNS-icon .SNS-list li a {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.fixid-menu .fixid-content .content-box .SNS-icon .SNS-list li a img {
+  width: 3vw;
+  border-radius: 50%;
+  /* 丸いアイコン */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+.fixid-menu .fixid-content .content-box .SNS-icon .SNS-list li a img:hover {
+  transform: scale(1.2);
+  /* アイコンを少し拡大 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* ホバー時の影を強化 */
+}
+.fixid-menu .fixid-content .content-box .SNS-icon img {
+  border-radius: 80%;
+  width: 10%;
+}
+.fixid-menu .Top-slide {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.fixid-menu .Top-slide .img-content {
+  width: 100%;
+  position: relative;
+}
+.fixid-menu .Top-slide .img-content .item {
+  position: relative;
+  height: auto;
+  aspect-ratio: 3/2;
+}
+.fixid-menu .Top-slide .img-content .item .fade-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+  /* 非表示 */
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+.fixid-menu .Top-slide .img-content .item .fade-image.active {
+  opacity: 1;
+  /* 表示 */
+  z-index: 2;
+}
+.fixid-menu .Roots-TextContent {
+  padding: 5%;
+}
+.fixid-menu .Roots-TextContent .title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 3.2vw;
+  color: #91674B;
+}
+.fixid-menu .Roots-TextContent .text-content {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
+.fixid-menu .Roots-TextContent .text-content .img-content {
+  width: 15%;
+}
+.fixid-menu .Roots-TextContent .text-content .img-content img {
+  text-align: center;
+  max-width: 100%;
+  height: auto;
+}
+.fixid-menu .Roots-TextContent .text-content .main-text {
+  margin-top: 2vw;
+  font-weight: 500;
+  font-size: 1.2vw;
+  padding-left: 2%;
+}
+.fixid-menu .photo-container .photo-content {
+  margin-top: 5vh;
+  display: flex;
+  gap: 15%;
+  justify-content: center;
+}
+.fixid-menu .photo-container .photo-content img {
+  width: 20%;
+  border: solid 0.3vw #91674B;
+}
+.fixid-menu .photo-container .photo-content2 {
+  display: flex;
+  gap: 15%;
+  justify-content: center;
+  margin-top: 4vh;
+}
+.fixid-menu .photo-container .photo-content2 img {
+  width: 20%;
+  border: solid 0.3vw #91674B;
+}
+
+/* 共通アニメーションの設定 */
+/* 共通アニメーションの設定 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.project-container .object-img {
+  position: relative;
+  /* 初期状態ではアニメーションなし */
+  /* .is-visible クラスでアニメーション開始 */
+}
+.project-container .object-img .object {
+  width: 100%;
+}
+.project-container .object-img .project-title {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  text-align: center;
+  margin: 10vw 0;
+}
+.project-container .object-img .project-title .title {
+  font-weight: 700;
+  font-size: 3.2vw;
+  color: #91674B;
+}
+.project-container .object-img .project-title .text {
+  margin-top: 2vw;
+  font-size: 1.2vw;
+}
+.project-container .object-img .project-content1 {
+  margin-top: 4vw;
+  width: 20vw;
+  padding: 1vw;
+  background-color: #fff4ea;
+  box-shadow: 0 0 0 0.8vw #fff4ea;
+  border: 0.2vw dashed #ffbf7f;
+  border-radius: 0.8vw;
+  color: #000;
+  opacity: 0;
+  transform: translateY(20px); /* 初期位置 */
+  transition: opacity 1s, transform 1s;
+}
+.project-container .object-img .project-content1.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeIn 1.5s forwards; /* アニメーション設定 */
+}
+.project-container .object-img .main-content,
+.project-container .object-img .main-content2 {
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+  animation-delay: 0.5s; /* 少し遅れて表示 */
+}
+.project-container .object-img .main-content2 {
+  animation-delay: 1s;
+}
+.project-container .object-img img {
+  width: 15vw;
+}
+.project-container .object-img .content-title {
+  font-size: 1.6vw;
+  font-weight: 600;
+  margin: 1vw;
+}
+.project-container .object-img .main-text {
+  font-size: 0.8vw;
+}
+.project-container .object-img .btn {
+  margin: 1vw;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+.project-container .object-img .btn-malformation {
+  font-size: 0.8vw;
+  padding: 1vw 2vw;
+  color: #fff;
+  border-radius: 100% 8vw/8vw 100%;
+  background-color: #eb6100;
+}
+.project-container .object-img .btn-malformation:hover {
+  color: #fff;
+  border-radius: 60% 80%/100% 80%;
+}
+.project-container .object-img .btn-malformation--pastel {
+  background: #f4a261;
+  background: linear-gradient(135deg, #f4a261 40%, #FFF6E3 100%);
+  box-shadow: 1vw 0.5vw 0 #fefeb3;
+}
+
+.menber-ship {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(120deg, #f9eee3, #f7d1a3, #f9c7b0);
+  background-size: 800% 800%;
+  animation: gradientShift 10s infinite alternate ease-in-out;
+  width: 100%;
+  height: 45vw;
+}
+.menber-ship .main-color {
+  margin: 10vw;
+  background-color: #ffd904;
+  width: 85%;
+  padding: 1vw 8vw; /* 上部の余白を減らす */
+  border-radius: 1vw;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* 子要素を縦並びに変更 */
+  align-items: flex-start;
+}
+.menber-ship .main-color .plus {
+  display: flex;
+  align-items: flex-start;
+  gap: 1vw;
+}
+.menber-ship .main-color .plus .text {
+  white-space: nowrap;
+  font-size: 0.7vw;
+  border: 0.1vw solid rgb(0, 0, 0);
+  padding: 0.8vw 1vw;
+  border-radius: 0.4vw;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+}
+.menber-ship .main-color .title {
+  margin-top: 3vw;
+  text-align: center;
+  font-size: 1.8vw;
+  font-weight: 600;
+  width: 100%;
+  margin-bottom: 1vw;
+  color: #91674B;
+}
+.menber-ship .main-color .title .title-text {
+  margin-top: 1vw;
+  color: black;
+  font-weight: 500;
+  font-size: 1vw;
+}
+.menber-ship .main-color .photo-content {
+  padding: 0vw 3vw;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+.menber-ship .main-color .photo-content img {
+  width: 100%;
+  height: 30%;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+.News {
+  padding: 7vw;
+}
+.News .News-title {
+  color: #91674B;
+  font-size: 3vw;
+  text-align: center;
+  font-weight: 700;
+}
+.News ul li {
+  display: flex;
+  margin-top: 2vw;
+  justify-content: center;
+  gap: 10%;
+  font-size: 1.2vw;
+}
+.News ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 0.5vw 1vw;
+  border-bottom: 2px solid transparent; /* 初期状態では下線なし */
+  transition: all 0.3s ease;
+}
+.News ul li a:after {
+  border-bottom: 0.2vw solid #f4a261;
+  color: #f4a261;
+}
+.News .News-content {
+  display: flex;
+  flex-direction: column;
+  margin: 3vw 0vw;
+}
+.News .News-content .content-box-news {
+  display: block;
+  width: 100%;
+  background: #fff;
+  gap: 10%;
+  margin-bottom: 2vw;
+  padding: 2vw;
+}
+.News .News-content .content-box-news .text-box {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+.News .News-content .content-box-news .text-box .date {
+  margin-top: 0.2vw;
+  font-size: 1vw;
+  color: #8C8C8C;
+}
+.News .News-content .content-box-news .text-box .tag {
+  font-size: 1.2vw;
+  width: 8vw;
+  height: 2vw;
+  background-color: transparent;
+  border: 0.2vw solid #F4A261;
+  border-radius: 5vw;
+  color: #F4A261;
+  text-align: center;
+}
+.News .News-content .content-box-news .text-box .text {
+  font-size: 1.2vw;
+}
+.News .News-content .content-box-news::after {
+  display: block;
+}
+.News .last-text {
+  margin-top: 3vw;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

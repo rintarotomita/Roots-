@@ -1,0 +1,222 @@
+@use "../layout/variable" as *;
+
+.fixid-menu {
+    padding-left: 25%;
+
+    .fixid-content {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 25%;
+        height: 100%;
+        background-color: #F4A261;
+
+        .content-box {
+            margin-top: 5vw;
+            text-align: center;
+
+            .title-logo {
+                img {
+                    width: 15%;
+                }
+            }
+
+            .title-name {
+                font-weight: 700;
+                font-size: 1vw;
+            }
+
+            .menu {
+                list-style-type: none;
+                padding: 0;
+                margin-top: 3vw;
+                font-size: 1.6vw;
+
+                .menu-item {
+                    position: relative;
+
+                    .hover-trigger {
+                        font-size: 1.6vw;
+                    }
+
+                    a {
+                        font-size: 1vw;
+                        color: black;
+                        padding: 0.5vw 1.5vw;
+                        display: inline-block;
+                        transition: all 0.3s ease;
+                    }
+
+                    .submenu {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        position: absolute;
+                        left: 0;
+                        top: 100%;
+                        display: none;
+                        background-color: #F4A261;
+                        border: 1px solid #ccc;
+                        z-index: 10;
+                        width: 100%;
+                    }
+                    .submenu li {
+                        margin: 0;
+                        padding: 0;
+                    }
+            
+                    .submenu a {
+                        font-size: 1.4vw;
+                        padding: 0.5vw 1.5vw;
+                        color: black;
+                    }
+            
+                    &:hover .submenu {
+                        display: block;
+                    }
+                }
+
+                ul,
+                li {
+                    margin-top: 1vw;
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        text-decoration: none;
+                        /* タイトルに合わせた色 */
+                        border-radius: 5px;
+                        /* 丸みを加えて優しい印象 */
+                        transition: all 0.3s ease;
+                        position: relative;
+
+                        &:hover {
+                            cursor: pointer;
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                        }
+
+                        &::after {
+                            position: absolute;
+                            /* ホバー時に下線が現れる */
+                        }
+                    }
+                }
+            }
+            .SNS-icon{
+                margin-top: 23vw;
+                .SNS-list{
+                    display: flex;
+                    justify-content: center;
+                    gap: 5%;
+                    li{
+                        list-style-type: none;
+                        a{
+                            display: inline-block;
+                            transition: all 0.3s ease;
+                            img {
+                                width: 3vw;
+                                border-radius: 50%;
+                                /* 丸いアイコン */
+                                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+                                transition: all 0.3s ease;
+                                transform: scale(1);
+            
+                                &:hover {
+                                    transform: scale(1.2);
+                                    /* アイコンを少し拡大 */
+                                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                                    /* ホバー時の影を強化 */
+                                }
+                            }
+                        }
+                    }
+                }
+                img{
+                    border-radius: 80%;
+                    width:10%;
+                }
+            }
+        }
+    }
+    .Top-slide{
+        position: relative;
+        display: flex;
+        width: 100%;
+        .img-content{
+            width: 100%;
+            position: relative;
+            .item{
+                position: relative;
+                height: auto;
+                aspect-ratio: 3 / 2;
+                .fade-image {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    opacity: 0;
+                    /* 非表示 */
+                    transition: opacity 1s ease-in-out;
+                    z-index: 1;
+                }
+                .fade-image.active {
+                    opacity: 1;
+                    /* 表示 */
+                    z-index: 2;
+                }
+            }
+        }
+    }
+    .Roots-TextContent{
+        padding: 5%;
+        .title{
+            text-align: center;
+            font-weight: 700;
+            font-size: 3.2vw;
+            color: #91674B;
+        }
+        .text-content{
+            display: flex;
+            justify-content: center;
+            gap: 2%;
+            .img-content{
+                width: 15%;
+                img{
+                    text-align: center;
+                    //width: 30%;
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+            .main-text{
+                margin-top: 2vw;
+                font-weight: 500;
+                font-size: 1.2vw;
+                padding-left: 2%;
+            }
+        }
+    }
+    .photo-container{
+        .photo-content{
+            margin-top: 5vh;
+            display: flex;
+            gap: 15%;
+            justify-content: center;
+            img{
+                width: 20%;
+                border: solid 0.3vw #91674B;
+            }
+        }
+        .photo-content2{
+            display: flex;
+            gap: 15%;
+            justify-content: center;
+            margin-top: 4vh;
+            img{
+                width: 20%;
+                border: solid 0.3vw #91674B;
+            }
+        }
+    }
+}
