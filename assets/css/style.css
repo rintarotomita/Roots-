@@ -214,118 +214,6 @@ body {
   border: solid 0.3vw #91674B;
 }
 
-/* 共通アニメーションの設定 */
-/* 共通アニメーションの設定 */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.project-container .object-img {
-  position: relative;
-  /* 初期状態ではアニメーションなし */
-  /* .is-visible クラスでアニメーション開始 */
-}
-.project-container .object-img .object {
-  width: 100%;
-}
-.project-container .object-img .project-title {
-  position: absolute;
-  top: 0%;
-  width: 100%;
-  text-align: center;
-  margin: 10vw 0;
-}
-.project-container .object-img .project-title .title {
-  font-weight: 700;
-  font-size: 3.2vw;
-  color: #91674B;
-}
-.project-container .object-img .project-title .text {
-  margin-top: 2vw;
-  font-size: 1.2vw;
-}
-.project-container .object-img .project-content1 {
-  margin-top: 4vw;
-  width: 20vw;
-  padding: 1vw;
-  background-color: #fff4ea;
-  box-shadow: 0 0 0 0.8vw #fff4ea;
-  border: 0.2vw dashed #ffbf7f;
-  border-radius: 0.8vw;
-  color: #000;
-  opacity: 0;
-  transform: translateY(20px); /* 初期位置 */
-  transition: opacity 1s, transform 1s;
-}
-.project-container .object-img .project-content1.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-  animation: fadeIn 1.5s forwards; /* アニメーション設定 */
-}
-.project-container .object-img .main-content,
-.project-container .object-img .main-content2 {
-  display: flex;
-  justify-content: center;
-  gap: 4vw;
-  opacity: 0;
-  animation: fadeIn 1.5s forwards;
-  animation-delay: 0.5s; /* 少し遅れて表示 */
-}
-.project-container .object-img .main-content2 {
-  animation-delay: 1s;
-}
-.project-container .object-img img {
-  width: 15vw;
-}
-.project-container .object-img .content-title {
-  font-size: 1.6vw;
-  font-weight: 600;
-  margin: 1vw;
-}
-.project-container .object-img .main-text {
-  font-size: 0.8vw;
-}
-.project-container .object-img .btn {
-  margin: 1vw;
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1.5;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  transition: all 0.3s;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  color: #212529;
-  border-radius: 0.5rem;
-}
-.project-container .object-img .btn-malformation {
-  font-size: 0.8vw;
-  padding: 1vw 2vw;
-  color: #fff;
-  border-radius: 100% 8vw/8vw 100%;
-  background-color: #eb6100;
-}
-.project-container .object-img .btn-malformation:hover {
-  color: #fff;
-  border-radius: 60% 80%/100% 80%;
-}
-.project-container .object-img .btn-malformation--pastel {
-  background: #f4a261;
-  background: linear-gradient(135deg, #f4a261 40%, #FFF6E3 100%);
-  box-shadow: 1vw 0.5vw 0 #fefeb3;
-}
-
 .menber-ship {
   display: flex;
   justify-content: center;
@@ -466,4 +354,116 @@ body {
 .News .last-text {
   margin-top: 3vw;
   text-align: center;
+}
+
+/* 共通アニメーションの設定 */
+/* 共通アニメーションの設定 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.project-container .object-img {
+  position: relative;
+  /* 初期状態ではアニメーションなし */
+  /* .is-visible クラスでアニメーション開始 */
+}
+.project-container .object-img .object {
+  width: 100%;
+}
+.project-container .object-img .project-title {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  text-align: center;
+  margin: 10vw 0;
+}
+.project-container .object-img .project-title .title {
+  font-weight: 700;
+  font-size: 3.2vw;
+  color: #91674B;
+}
+.project-container .object-img .project-title .text {
+  margin-top: 2vw;
+  font-size: 1.2vw;
+}
+.project-container .object-img .project-content1 {
+  margin-top: 4vw;
+  width: 20vw;
+  padding: 1vw;
+  background-color: #fff4ea;
+  box-shadow: 0 0 0 0.8vw #fff4ea;
+  border: 0.2vw dashed #ffbf7f;
+  border-radius: 0.8vw;
+  color: #000;
+  opacity: 0;
+  transform: translateY(20px); /* 初期位置 */
+  transition: opacity 1s, transform 1s;
+}
+.project-container .object-img .project-content1.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeIn 1.5s forwards; /* アニメーション設定 */
+}
+.project-container .object-img .main-content,
+.project-container .object-img .main-content2 {
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+  animation-delay: 0.5s; /* 少し遅れて表示 */
+}
+.project-container .object-img .main-content2 {
+  animation-delay: 1s;
+}
+.project-container .object-img img {
+  width: 15vw;
+}
+.project-container .object-img .content-title {
+  font-size: 1.6vw;
+  font-weight: 600;
+  margin: 1vw;
+}
+.project-container .object-img .main-text {
+  font-size: 0.8vw;
+}
+.project-container .object-img .btn {
+  margin: 1vw;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+.project-container .object-img .btn-malformation {
+  font-size: 0.8vw;
+  padding: 1vw 2vw;
+  color: #fff;
+  border-radius: 100% 8vw/8vw 100%;
+  background-color: #eb6100;
+}
+.project-container .object-img .btn-malformation:hover {
+  color: #fff;
+  border-radius: 60% 80%/100% 80%;
+}
+.project-container .object-img .btn-malformation--pastel {
+  background: #f4a261;
+  background: linear-gradient(135deg, #f4a261 40%, #FFF6E3 100%);
+  box-shadow: 1vw 0.5vw 0 #fefeb3;
 }/*# sourceMappingURL=style.css.map */
