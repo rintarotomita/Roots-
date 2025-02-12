@@ -224,15 +224,16 @@ body {
   height: 45vw;
 }
 .menber-ship .main-color {
-  margin: 10vw;
+  margin: 7vw;
   background-color: #ffd904;
   width: 85%;
-  padding: 1vw 8vw; /* 上部の余白を減らす */
+  padding: 4vw 8vw; /* 上部の余白を減らす */
   border-radius: 1vw;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   display: flex;
+  justify-content: center;
   flex-direction: column; /* 子要素を縦並びに変更 */
-  align-items: flex-start;
+  align-items: center; /* これでボタンも中央に配置される */
 }
 .menber-ship .main-color .plus {
   display: flex;
@@ -249,7 +250,7 @@ body {
   background-color: transparent;
 }
 .menber-ship .main-color .title {
-  margin-top: 3vw;
+  margin-top: 1vw;
   text-align: center;
   font-size: 1.8vw;
   font-weight: 600;
@@ -264,14 +265,32 @@ body {
   font-size: 1vw;
 }
 .menber-ship .main-color .photo-content {
-  padding: 0vw 3vw;
   display: flex;
   justify-content: center;
-  gap: 5%;
+  gap: 1vw;
 }
 .menber-ship .main-color .photo-content img {
-  width: 100%;
-  height: 30%;
+  width: 15vw;
+  display: block;
+}
+.menber-ship .main-color .btn {
+  background: rgb(244, 162, 97);
+  color: #000;
+  font-weight: 700;
+  padding: 1vw 2vw;
+  font-size: 1.2vw;
+  border-radius: 0.5vw;
+  text-decoration: none;
+  margin-top: 2vw;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.menber-ship .main-color .btn:hover {
+  transform: translateY(0.2vw);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.menber-ship .main-color .btn:active {
+  transform: translateY(0.4vw);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes gradientShift {
