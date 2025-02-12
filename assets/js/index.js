@@ -92,22 +92,45 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const elements = document.querySelectorAll('.project-content1'); // アニメーション対象の要素
-    
+
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // 要素が画面に見えた時にis-visibleクラスを追加してアニメーションを開始
                 entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target); // 監視を解除
+                observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.5 // 要素が50%以上見えた時にアニメーション開始
+        threshold: 0.5
     });
-    
+
     elements.forEach(element => {
-        observer.observe(element); // 各要素を監視対象に追加
+        observer.observe(element);
     });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const textElement = document.querySelector(".main-text");
+
+    if (!textElement) {
+        console.error("❌ .main-text が見つからない！");
+        return;
+    }
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                console.log("🔍 監視中:", entry.isIntersecting);
+                if (entry.isIntersecting) {
+                    textElement.classList.add("show");
+                    observer.unobserve(entry.target); // 一度だけ発火
+                }
+            });
+        },
+        { rootMargin: "0px", threshold: 0.2 } // 少し見えたら発火
+    );
+
+    observer.observe(textElement);
 });
