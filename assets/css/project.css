@@ -9,6 +9,10 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  background-color: #FFF6E3;
+}
+
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -149,39 +153,10 @@ html {
   border-radius: 80%;
   width: 10%;
 }
-.fixid-menu .Top-slide {
-  position: relative;
-  display: flex;
-  width: 100%;
-}
-.fixid-menu .Top-slide .img-content {
-  width: 100%;
-  position: relative;
-}
-.fixid-menu .Top-slide .img-content .item {
-  position: relative;
-  height: auto;
-  aspect-ratio: 3/2;
-}
-.fixid-menu .Top-slide .img-content .item .fade-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  z-index: 1;
-}
-.fixid-menu .Top-slide .img-content .item .fade-image.active {
-  opacity: 1;
-  z-index: 2;
-}
 
 .Top-photo {
   position: relative;
+  display: flex;
 }
 .Top-photo img {
   width: 100%;
@@ -224,4 +199,9 @@ html {
   padding: 0.5vw 1vw;
   border-radius: 0.5vw;
   text-align: center;
+}
+#project-content .project-purpose-back {
+  color: #fff;
+  width: 1000px;
+  height: 100px;
 }/*# sourceMappingURL=project.css.map */
