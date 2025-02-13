@@ -1,11 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.fade-in{
-    background-color: #FFF6E3;
+.fade-in {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInEffect 1s ease-out forwards;
@@ -20,10 +22,4 @@
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.fade-out {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }

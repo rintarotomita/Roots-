@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +10,6 @@
 }
 
 .fade-in {
-  background-color: #FFF6E3;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInEffect 1s ease-out forwards;
@@ -22,12 +25,6 @@
     transform: translateY(0);
   }
 }
-.fade-out {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
 .fixid-menu {
   padding-left: 25%;
 }
@@ -175,64 +172,17 @@
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 0;
-  /* 非表示 */
   transition: opacity 1s ease-in-out;
   z-index: 1;
 }
 .fixid-menu .Top-slide .img-content .item .fade-image.active {
   opacity: 1;
-  /* 表示 */
   z-index: 2;
 }
-.fixid-menu .Roots-TextContent {
-  padding: 5%;
-}
-.fixid-menu .Roots-TextContent .title {
-  text-align: center;
-  font-weight: 700;
-  font-size: 3.2vw;
-  color: #91674B;
-}
-.fixid-menu .Roots-TextContent .text-content {
-  display: flex;
-  justify-content: center;
-  gap: 2%;
-}
-.fixid-menu .Roots-TextContent .text-content .img-content {
-  width: 15%;
-}
-.fixid-menu .Roots-TextContent .text-content .img-content img {
-  text-align: center;
-  max-width: 100%;
-  height: auto;
-}
-.fixid-menu .Roots-TextContent .text-content .main-text {
-  margin-top: 2vw;
-  font-weight: 500;
-  font-size: 1.2vw;
-  padding-left: 2%;
-}
-.fixid-menu .photo-container .photo-content {
-  margin-top: 5vh;
-  display: flex;
-  gap: 15%;
-  justify-content: center;
-}
-.fixid-menu .photo-container .photo-content img {
-  width: 20%;
-  border: solid 0.3vw #91674B;
-}
-.fixid-menu .photo-container .photo-content2 {
-  display: flex;
-  gap: 15%;
-  justify-content: center;
-  margin-top: 4vh;
-}
-.fixid-menu .photo-container .photo-content2 img {
-  width: 20%;
-  border: solid 0.3vw #91674B;
-}
 
+.Top-photo {
+  position: relative;
+}
 .Top-photo img {
   width: 100%;
 }
@@ -253,4 +203,25 @@
 .main-text.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+#project-content .project-top-img {
+  position: relative;
+  display: inline-block;
+}
+#project-content .project-top-img img {
+  width: 100%;
+  display: block;
+}
+#project-content .project-top-img p {
+  position: absolute;
+  top: 95%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2vw;
+  font-weight: bold;
+  padding: 0.5vw 1vw;
+  border-radius: 0.5vw;
+  text-align: center;
 }/*# sourceMappingURL=project.css.map */

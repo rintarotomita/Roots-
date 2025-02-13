@@ -13,29 +13,14 @@
     <script src="assets/js/index.js"></script>
 </head>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        document.body.classList.add("fade-in");
 
-        const links = document.querySelectorAll("a");
-        links.forEach(link => {
-            link.addEventListener("click", function (e) {
-                if (link.getAttribute("href").startsWith("#") || link.target === "_blank") return; // ページ内リンクや別タブは無視
-                e.preventDefault();
-                document.body.classList.add("fade-out"); 
-                setTimeout(() => {
-                    window.location.href = link.href;
-                }, 500);
-            });
-        });
-    });
-</script>
-<body class="fade-in">
+
+<body>
     <section class="fixid-menu">
         <div class="fixid-content">
             <div class="content-box">
                 <div class="title-logo">
-                    <img src="assets/img/Roots_logo_img.png">
+                    <img src="./assets/img/Roots_logo_img.png">
                 </div>
                 <div class="title-name">
                     <p>Roots Project</p>
@@ -45,14 +30,14 @@
                         <a href="">この活動について</a>
                     </li>
                     <li class="menu-item">
-                        <a href="" class="hover-trigger">このプロジェクトについて</a>
+                        <a href="./project.html" class="hover-trigger">このプロジェクトについて</a>
                         <ul class="submenu">
                             <li>
-                                <a href="">親子の感情可視化プロジェクト</a>
-                                <a href="">親子で作るデジタルアート</a>
-                                <a href="">親子専用クラウドファンディング</a>
-                                <a href="">親子タイムカプセルプロジェクト</a>
-                                <a href="">親子の「1秒ムービー」プロジェクト</a>
+                                <a href="./project.html#">親子の感情可視化プロジェクト</a>
+                                <a href="./project.html#">親子で作るデジタルアート</a>
+                                <a href="./project.html#">親子専用クラウドファンディング</a>
+                                <a href="./project.html#">親子タイムカプセルプロジェクト</a>
+                                <a href="./project.html#">親子の「1秒ムービー」プロジェクト</a>
                             </li>
                         </ul>
                     </li>
@@ -92,6 +77,7 @@
                 </div>
             </div>
         </div>
+
         <div class="Top-photo">
             <img src="./assets/img/Project-Top-img.png" alt="親子の絆を深める">
         </div>
@@ -125,11 +111,13 @@
                 と紡ぎ、クラウドファンディングでは夢を具体的なプロジェクトとして実現します。<br>
                 これらの取り組みは、親子だけでなく、地域や社会全体にも新しい価値を提供します。<br>
                 Rootsプロジェクトは、単なる活動にとどまらず、「親子関係の新しい形」を提案し、<br>
-                次世代への架け橋となる可能性を秘めています。</p>
+                次世代への架け橋となる可能性を秘めています。
+            </p>
         </div>
-        <div class="project-content">
+        <div id="project-content">
             <div class="project-top-img">
                 <img src="./assets/img/Project-imgs/Project-img1.png" alt="">
+                <p>1.親子の感情可視化プログラム</p>
             </div>
         </div>
     </section>
