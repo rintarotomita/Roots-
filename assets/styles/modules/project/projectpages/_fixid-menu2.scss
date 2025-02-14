@@ -137,4 +137,86 @@
             }
         }
     }
+    .Top-slide{
+        position: relative;
+        display: flex;
+        width: 100%;
+        .img-content{
+            width: 100%;
+            position: relative;
+            .item{
+                position: relative;
+                height: auto;
+                aspect-ratio: 3 / 2;
+                .fade-image {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    opacity: 0;
+                    /* 非表示 */
+                    transition: opacity 1s ease-in-out;
+                    z-index: 1;
+                }
+                .fade-image.active {
+                    opacity: 1;
+                    /* 表示 */
+                    z-index: 2;
+                }
+            }
+        }
+    }
+    .Roots-TextContent{
+        padding: 5%;
+        .title{
+            text-align: center;
+            font-weight: 700;
+            font-size: 3.2vw;
+            color: #91674B;
+        }
+        .text-content{
+            display: flex;
+            justify-content: center;
+            gap: 2%;
+            .img-content{
+                width: 15%;
+                img{
+                    text-align: center;
+                    //width: 30%;
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+            .main-text{
+                margin-top: 2vw;
+                font-weight: 500;
+                font-size: 1.2vw;
+                padding-left: 2%;
+            }
+        }
+    }
+    .photo-container{
+        .photo-content{
+            margin-top: 5vh;
+            display: flex;
+            gap: 15%;
+            justify-content: center;
+            img{
+                width: 20%;
+                border: solid 0.3vw #91674B;
+            }
+        }
+        .photo-content2{
+            display: flex;
+            gap: 15%;
+            justify-content: center;
+            margin-top: 4vh;
+            img{
+                width: 20%;
+                border: solid 0.3vw #91674B;
+            }
+        }
+    }
 }

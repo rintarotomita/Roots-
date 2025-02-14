@@ -10,20 +10,3 @@ html {
 body{
     background-color: #FFF6E3;
 }
-
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInEffect 1s ease-out forwards;
-}
-
-@keyframes fadeInEffect {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
